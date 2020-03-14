@@ -62,7 +62,7 @@ d3.json('nygeo.json').then(function(data) {
                     let scaledPoints = albersProj([d['longitude'], d['latitude']])
                     return scaledPoints[1]
                 })
-                .attr('r', 5)
+                .attr('r', 3)
                 .attr('fill', 'steelblue')
                 .on("click", function(d) {
                     d3.select(this)
