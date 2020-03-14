@@ -10,8 +10,8 @@
  * 3. show how to plot points with geoAlbers
  */
 const m = {
-    width: 800,
-    height: 600
+    width: 1200,
+    height: 1000
 }
 
 const svg = d3.select("body").append('svg')
@@ -26,7 +26,7 @@ d3.json('nygeo.json').then(function(data) {
     d3.csv('data.csv').then(function(pointData) {
 
         const albersProj = d3.geoAlbers()
-            .scale(190000)
+            .scale(90000)
             .rotate([73.97237, 0])
             .center([0, 40.64749])
             .translate([m.width/2, m.height/2]);
